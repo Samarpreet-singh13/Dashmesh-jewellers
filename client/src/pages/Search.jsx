@@ -50,7 +50,7 @@ const Search = () => {
         setHasSearched(true);
         try {
             const tagsQuery = selectedFilters.join(',');
-            const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/designs?search=${encodeURIComponent(query)}&limit=50&tags=${encodeURIComponent(tagsQuery)}`);
+            const res = await axios.get(`${import.meta.env.VITE_API_URL || ''}/api/designs?search=${encodeURIComponent(query)}&limit=50&tags=${encodeURIComponent(tagsQuery)}`);
             setResults(res.data);
         } catch (error) {
             console.error("Search failed", error);

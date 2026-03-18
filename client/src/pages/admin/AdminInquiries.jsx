@@ -20,7 +20,7 @@ const AdminInquiries = () => {
         setIsLoading(true);
         try {
             const token = localStorage.getItem("adminToken");
-            const res = await axios.get(((import.meta.env.VITE_API_URL || 'http://localhost:5000') + "/api/inquiries"), {
+            const res = await axios.get(((import.meta.env.VITE_API_URL || '') + "/api/inquiries"), {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setInquiries(res.data);
@@ -34,7 +34,7 @@ const AdminInquiries = () => {
     const markAsContacted = async (id) => {
         try {
             const token = localStorage.getItem("adminToken");
-            await axios.put(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/inquiries/${id}`, { status: "contacted" }, {
+            await axios.put(`${import.meta.env.VITE_API_URL || ''}/api/inquiries/${id}`, { status: "contacted" }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchInquiries();

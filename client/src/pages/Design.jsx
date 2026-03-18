@@ -14,7 +14,7 @@ const Design = () => {
 
     const fetchDesign = async () => {
         try {
-            const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/designs/${id}`);
+            const res = await axios.get(`${import.meta.env.VITE_API_URL || ''}/api/designs/${id}`);
             setDesign(res.data);
         } catch (error) {
             console.log(error);
@@ -29,7 +29,7 @@ const Design = () => {
         e.preventDefault();
         setSubmitStatus("submitting");
         try {
-            await axios.post(((import.meta.env.VITE_API_URL || 'http://localhost:5000') + "/api/inquiries"), {
+            await axios.post(((import.meta.env.VITE_API_URL || '') + "/api/inquiries"), {
                 ...formData,
                 designId: design._id
             });

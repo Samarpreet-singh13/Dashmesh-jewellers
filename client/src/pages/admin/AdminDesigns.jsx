@@ -17,7 +17,7 @@ const AdminDesigns = () => {
 
     const fetchDesigns = async () => {
         try {
-            const res = await axios.get(((import.meta.env.VITE_API_URL || 'http://localhost:5000') + "/api/designs"));
+            const res = await axios.get(((import.meta.env.VITE_API_URL || '') + "/api/designs"));
             setDesigns(res.data);
         } catch (error) {
             console.log(error);
@@ -31,7 +31,7 @@ const AdminDesigns = () => {
         
         try {
             const token = localStorage.getItem("adminToken");
-            await axios.delete(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/designs/${id}`, {
+            await axios.delete(`${import.meta.env.VITE_API_URL || ''}/api/designs/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchDesigns();

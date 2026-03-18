@@ -13,7 +13,7 @@ const Category = () => {
         setIsLoading(true);
         try {
             const res = await axios.get(
-                `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/designs/category/${category}`
+                `${import.meta.env.VITE_API_URL || ''}/api/designs/category/${category}`
             );
             let data = res.data;
             if (sort === "low") {

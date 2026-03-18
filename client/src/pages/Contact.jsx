@@ -10,7 +10,7 @@ const Contact = () => {
         e.preventDefault();
         setStatus("loading");
         try {
-            await axios.post(((import.meta.env.VITE_API_URL || 'http://localhost:5000') + "/api/inquiries"), formData);
+            await axios.post(((import.meta.env.VITE_API_URL || '') + "/api/inquiries"), formData);
             setStatus("success");
             setFormData({ name: "", phone: "", message: "" });
             setTimeout(() => setStatus(null), 5000);

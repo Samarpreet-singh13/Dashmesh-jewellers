@@ -26,7 +26,7 @@ const EditDesign = () => {
 
     const fetchDesign = async () => {
         try {
-            const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/designs/${id}`);
+            const res = await axios.get(`${import.meta.env.VITE_API_URL || ''}/api/designs/${id}`);
             const design = res.data;
             setTitle(design.title || "");
             setDescription(design.description || "");
@@ -56,7 +56,7 @@ const EditDesign = () => {
         try {
             const token = localStorage.getItem("adminToken");
             await axios.put(
-                `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/designs/${id}`,
+                `${import.meta.env.VITE_API_URL || ''}/api/designs/${id}`,
                 formData,
                 { headers: { Authorization: `Bearer ${token}` } }
             );

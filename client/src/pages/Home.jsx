@@ -10,7 +10,7 @@ const Home = () => {
     const fetchDesigns = async () => {
         try {
             const res = await axios.get(
-                ((import.meta.env.VITE_API_URL || 'http://localhost:5000') + "/api/designs?limit=4")
+                ((import.meta.env.VITE_API_URL || '') + "/api/designs?limit=4")
             );
             setDesigns(res.data);
         } catch (error) {
