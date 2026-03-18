@@ -1,0 +1,313 @@
+body{
+background:black;
+color:white;
+font-family:Arial;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(black,#111);
+}
+
+.hero h1{
+font-size:60px;
+color:gold;
+letter-spacing:2px;
+}
+
+.hero p{
+font-size:22px;
+margin:20px 0;
+color:#ddd;
+}
+
+.hero button{
+padding:12px 30px;
+background:gold;
+border:none;
+font-size:16px;
+cursor:pointer;
+border-radius:6px;
+}
+
+/* PRODUCTS */
+
+.featured{
+padding:40px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* FEATURED SECTION */
+
+.featured{
+padding:40px;
+}
+
+.featured h2{
+margin-bottom:30px;
+}
+
+/* GRID */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+background:#111;
+padding:20px;
+text-align:center;
+border-radius:10px;
+transition:0.3s;
+}
+
+.product-card:hover{
+transform:translateY(-5px);
+}
+
+.product-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.product-card h3{
+margin:10px 0;
+font-size:18px;
+}
+
+.price{
+color:gold;
+font-weight:bold;
+}
+
+.product-card a{
+display:inline-block;
+margin-top:10px;
+color:gold;
+text-decoration:none;
+font-weight:bold;
+}
+
+.categories{
+padding:50px 20px;
+text-align:center;
+}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.category-card{
+background:#111;
+border-radius:10px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.category-card:hover{
+transform:translateY(-5px);
+}
+
+.category-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.category-card h3{
+padding:15px;
+}
+
+.category-page{
+padding:40px;
+}
+
+.category-page h2{
+text-transform:capitalize;
+margin-bottom:20px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#111;
+color:white;
+}
+
+.logo a{
+color:#ffd700;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#ffd700;
+}
+
+.hero{
+height:70vh;
+background-image:url("https://images.unsplash.com/photo-1617038220319-276d3cfab638");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.hero-btn{
+padding:12px 25px;
+font-size:16px;
+background:#ffd700;
+border:none;
+cursor:pointer;
+font-weight:bold;
+}
+
+.why{
+    color: #111;
+padding:60px 20px;
+text-align:center;
+background:#f9f9f9;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.why-card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.why-card h3{
+margin-bottom:10px;
+color:#111;
+}
+
+.why-card p{
+color:#555;
+}
+
+.footer{
+background:#111;
+color:white;
+padding:40px 20px;
+margin-top:60px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.footer-section h3,
+.footer-section h4{
+color:#ffd700;
+margin-bottom:10px;
+}
+
+.footer-section ul{
+list-style:none;
+padding:0;
+}
+
+.footer-section ul li{
+margin-bottom:6px;
+}
+
+.footer-section a{
+text-decoration:none;
+color:white;
+}
+
+.footer-section a:hover{
+color:#ffd700;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+border-top:1px solid #333;
+padding-top:15px;
+font-size:14px;
+}
+
+.sort-bar{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+.sort-bar select{
+padding:6px 10px;
+}   
